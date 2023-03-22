@@ -94,6 +94,7 @@ clean:
 	/bin/rm -f part_2/*.o
 	/bin/rm -f ft_printf/*.o
 	/bin/rm -f get_next_line/*.o
+	/bin/rm -f utils/*.o
 
 fclean: clean
 	/bin/rm -f $(NAME)
