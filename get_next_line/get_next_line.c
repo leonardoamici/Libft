@@ -103,6 +103,17 @@ char	*get_next_line(int fd)
 	char		*line;
 	static char	*buf[FOPEN_MAX];
 
+	if (fd == -42)
+	{
+		i = 0;
+		while (i < FOPEN_MAX)
+		{
+			if (buf[i])
+				free(buf[i]);
+			i++;
+		}
+		return (NULL);
+	}
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
 	buf[fd] = ft_getdata(buf[fd], fd);

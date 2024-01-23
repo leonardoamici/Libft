@@ -80,7 +80,16 @@ PTFD := ft_printf_fd/ft_printf_fd.c \
 	ft_printf_fd/ft_matrix_fd.c
 	
 UTL :=  utils/ft_kill_matrix.c \
-		utils/ft_strcmp.c \
+	utils/ft_strcmp.c \
+	utils/ft_isspace.c \
+	utils/ft_ult_strjoin.c \
+	utils/ft_rev_split.c \
+	utils/ft_printmat.c \
+	utils/ft_matjoin.c \
+	utils/ft_ult_matjoin.c \
+	utils/ft_strlen_mod.c \
+	utils/ft_rev_strncmp.c \
+	utils/ft_split_mod.c
 
 GNL :=	get_next_line/get_next_line.c
 

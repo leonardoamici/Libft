@@ -6,7 +6,7 @@
 /*   By: lamici <lamici@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:56:38 by lamici            #+#    #+#             */
-/*   Updated: 2023/06/30 15:27:03 by lamici           ###   ########.fr       */
+/*   Updated: 2024/01/23 14:51:33 by lamici           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,21 @@ int		ft_printf_fd(int fd, const char *str, ...);
 int		ft_string_fd(int fd, char *str);
 int		ft_unsigned_fd(int fd, unsigned int n);
 int		ft_matrix_fd(int fd, char **mat);
-
+//other
 char	*get_next_line(int fd);
 int		ft_matlen(char **mat);
+int		ft_isspace(char c);
+char	*ft_ult_strjoin(int n, ...);
+char	*ft_rev_split(char **mat);
+void	ft_printmat(char **mat);
+int		ft_matlen(char **mat);
+int		ft_matlen_mod(char **mat, char *end);
 void	ft_kill_matrix(char **mat);
-int		ft_strcmp(char *str1, char *str2);
+char	**ft_matjoin(char **mat1, char **mat2);
+char	**ft_ult_matjoin(int n, ...);
+int		ft_rev_strncmp(char *s1, char *s2, int n);
+int		ft_strlen_mod(char *str, char end);
+int		ft_strlen_mod2(char *str, char *end);
+char	**ft_split_2(char const *s, char *c);
 
 #endif
