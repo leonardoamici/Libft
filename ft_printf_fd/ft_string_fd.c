@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char.c                                          :+:      :+:    :+:   */
+/*   ft_string_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lamici <lamici@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 09:34:47 by lamici            #+#    #+#             */
-/*   Updated: 2023/06/30 15:34:22 by lamici           ###   ########.fr       */
+/*   Created: 2022/10/21 09:43:01 by lamici            #+#    #+#             */
+/*   Updated: 2023/06/30 15:34:01 by lamici           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_char(int c)
+int	ft_string_fd(int fd, char *str)
 {
-	write(1, &c, 1);
-	return (1);
+	int	x;
+
+	x = 0;
+	if (str == 0)
+	{
+		write(fd, "(null)", 6);
+		return (6);
+	}
+	while (str[x] != '\0')
+	{
+		write(fd, &str[x], 1);
+		x++;
+	}
+	return (x);
 }

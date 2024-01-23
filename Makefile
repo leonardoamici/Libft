@@ -6,7 +6,7 @@
 #    By: lamici <lamici@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 09:16:30 by lamici            #+#    #+#              #
-#    Updated: 2023/03/03 09:24:07 by lamici           ###   ########.fr        #
+#    Updated: 2023/06/30 15:27:52 by lamici           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,13 +69,22 @@ PTF :=	ft_printf/ft_printf.c \
 	ft_printf/ft_hexd.c \
 	ft_printf/ft_digit.c \
 	ft_printf/ft_matrix.c
+
+PTFD := ft_printf_fd/ft_printf_fd.c \
+	ft_printf_fd/ft_char_fd.c \
+	ft_printf_fd/ft_string_fd.c \
+	ft_printf_fd/ft_unsigned_fd.c \
+	ft_printf_fd/ft_path_fd.c \
+	ft_printf_fd/ft_hexd_fd.c \
+	ft_printf_fd/ft_digit_fd.c \
+	ft_printf_fd/ft_matrix_fd.c
 	
 UTL :=  utils/ft_kill_matrix.c \
-		utils/ft_strcmp.c
+		utils/ft_strcmp.c \
 
 GNL :=	get_next_line/get_next_line.c
 
-OBJ_S = $(PT1:.c=.o) $(PT2:.c=.o) $(PTF:.c=.o) $(GNL:.c=.o) $(UTL:.c=.o)
+OBJ_S = $(PT1:.c=.o) $(PT2:.c=.o) $(PTF:.c=.o) $(PTFD:.c=.o) $(GNL:.c=.o) $(UTL:.c=.o)
 
 OBJ_B = $(BNS:.c=.o)
 
@@ -92,9 +101,10 @@ $(NAME): $(OBJ_S)
 clean: 
 	/bin/rm -f part_1/*.o
 	/bin/rm -f part_2/*.o
-	/bin/rm -f ft_printf/*.o
-	/bin/rm -f get_next_line/*.o
 	/bin/rm -f utils/*.o
+	/bin/rm -f ft_printf/*.o
+	/bin/rm -f ft_printf_fd/*.o
+	/bin/rm -f get_next_line/*.o
 
 fclean: clean
 	/bin/rm -f $(NAME)
