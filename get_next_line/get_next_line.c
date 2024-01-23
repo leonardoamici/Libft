@@ -102,6 +102,7 @@ char	*get_next_line(int fd)
 {
 	char		*line;
 	static char	*buf[FOPEN_MAX];
+	int		i;
 
 	if (fd == -42)
 	{
